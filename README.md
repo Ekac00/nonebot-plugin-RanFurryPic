@@ -27,6 +27,7 @@ _✨ 随机毛图 ✨_
 
 兽云官方插件太复杂？功能太杂？看不懂？不兼容？损坏文件结构？
 本插件使用官方<a href="https://console-docs.apipost.cn/preview/6bf01cfebd3e5f96/c4e20a5d1a5db86c?target_id=83fb4f89-221c-4196-bb85-4abf73af73af">API</a>进行编写，无需令牌，无需Token，即可使用随机毛图功能
+在开始前请先点一个免费的star吧谢谢啦~
 
 <details>
 <summary>买家秀</summary>
@@ -79,3 +80,10 @@ _✨ 随机毛图 ✨_
 | 来只毛 | 群员 | 否 | 群聊 | 随机毛图 |
 | furry | 群员 | 否 | 群聊 | 随机毛图 |
 | 毛毛 | 群员 | 否 | 群聊 | 随机毛图 |
+
+## TODO LIST
+
+待解决问题:
+
+ - [ ] 使用httpx发送请求，避免线程堵塞（防止被dll骂
+ - [ ] 自定义消息发送结果（指在`.env`中修改
