@@ -3,6 +3,7 @@ from nonebot import logger
 from nonebot.adapters.onebot.v11 import MessageSegment
 import requests
 from nonebot.plugin import PluginMetadata
+import httpx
 
 __plugin_meta__ = PluginMetadata(
     name="nonebot-plugin-RanFurryPic",
