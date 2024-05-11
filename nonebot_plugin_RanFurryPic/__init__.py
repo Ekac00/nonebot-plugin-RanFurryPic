@@ -63,5 +63,3 @@ async def handle_get_pic():
 async def handle_furry():
     result = await handle_get_pic()
     await furry.finish(result)
-
-furry_check = on_command("来只", priority=10, block=True)
