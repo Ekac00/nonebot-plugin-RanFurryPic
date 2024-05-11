@@ -82,10 +82,8 @@ async def handle_get_pic(args: Message = CommandArg()):
             pic_id = pic_json["picture"]["picture"]
             logger.success(f"状态码：{id_response.status_code}\n原始内容：{id_response.text}\n图片ID:{pic_id}")
         else:
-            logger.error(f"请求失败！
-状态码：{id_response.status_code}")
-            return f"请求失败！
-状态码：{id_response.status_code}"
+            logger.error(f"请求失败！\n状态码：{id_response.status_code}")
+            return f"请求失败！\n状态码：{id_response.status_code}"
 
     # 发送图片请求
     pic_url = "https://cloud.foxtail.cn/api/function/pictures?picture=" + pic_id
