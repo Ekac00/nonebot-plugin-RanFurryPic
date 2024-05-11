@@ -3,7 +3,7 @@ name = "nonebot_plugin_RanFurryPic"
 version = "1.0.3.4"
 description = "基于NoneBot2进行适配的兽云随机毛图插件"
 authors = [
-    {name = "Ekac00", email = "2396382559@qq.com"},
+    {name = "Ekac", email = "2396382559@qq.com"},
 ]
 dependencies = ["nonebot2", "requests", "nonebot-adapter-onebot"]
 requires-python = ">=3.8"
