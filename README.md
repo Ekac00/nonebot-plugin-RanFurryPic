@@ -38,9 +38,6 @@ _✨ 随机毛图 ✨_
 
 ## 💿 安装
 
-### 注意！本插件需要`requests`库发送请求，此库在1.0版本中未添加至依赖，请手动进行安装！
-    pip install requests
-
 <details open>
 <summary>使用 nb-cli 安装（推荐）</summary>
 在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
