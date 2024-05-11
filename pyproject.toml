@@ -5,7 +5,7 @@ description = "基于NoneBot2进行适配的兽云随机毛图插件"
 authors = [
     {name = "Ekac00", email = "2396382559@qq.com"},
 ]
-dependencies = ["nonebot2", "requests", "nonebot-adapter-onebot", "nonebot-adapter-fastapi"]
+dependencies = ["nonebot2", "requests", "nonebot-adapter-onebot"]
 requires-python = ">=3.8"
 readme = "README.md"
 license = {text = "MIT"}
