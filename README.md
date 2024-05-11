@@ -57,15 +57,8 @@ _✨ 随机毛图 ✨_
 
 打开 nonebot2 项目根目录下的 `pyproject.toml` 文件, 在 `[tool.nonebot]` 部分追加写入
 
-<<<<<<< HEAD
-    plugins = ["nonebot_plugin_template"]
-=======
-<<<<<<< HEAD
     plugins = ["nonebot_plugin_RanFurryPic"]
-=======
-    plugins = ["nonebot_plugin_template"]
->>>>>>> 12a75b0 (v1.0)
->>>>>>> 9106e15 (first commit)
+
 
 </details>
 
