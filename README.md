@@ -11,6 +11,10 @@
 _✨ 随机毛图 ✨_
 
 
+</a>
+<a href="https://github.com/Ekac00/nonebot-plugin-RanFurryPic/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Ekac00/nonebot-plugin-RanFurryPic.svg" alt="license">
+</a>
 <a href="https://pypi.python.org/pypi/nonebot-plugin-RanFurryPic">
     <img src="https://img.shields.io/pypi/v/nonebot-plugin-RanFurryPic.svg" alt="pypi">
 </a>
