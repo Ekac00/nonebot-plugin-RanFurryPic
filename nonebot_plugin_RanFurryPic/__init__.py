@@ -7,7 +7,7 @@ from nonebot.adapters import Message
 from nonebot.params import CommandArg
 
 __plugin_meta__ = PluginMetadata(
-    name="nonebot-plugin-RanFurryPic",
+    name="随机毛图",
     description="基于NoneBot2进行适配的兽云随机毛图插件",
     usage="预设指令有furry、来只毛、毛毛三种指令，发送后将会调用兽云的随即图片API并返回图片及基本介绍",
 
