@@ -11,13 +11,10 @@
 _✨ 随机毛图 ✨_
 
 
-<a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/owner/nonebot-plugin-template.svg" alt="license">
+<a href="https://pypi.python.org/pypi/nonebot-plugin-RanFurryPic">
+    <img src="https://img.shields.io/pypi/v/nonebot-plugin-RanFurryPic.svg" alt="pypi">
 </a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-template">
-    <img src="https://img.shields.io/pypi/v/nonebot-plugin-template.svg" alt="pypi">
-</a>
-<img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="python">
+<img src="https://img.shields.io/badge/python-3.9+-blue.svg" alt="python">
 
 </div>
 
