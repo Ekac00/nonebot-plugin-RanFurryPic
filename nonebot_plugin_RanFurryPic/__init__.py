@@ -1,7 +1,7 @@
 from nonebot import on_command
 from nonebot import logger
 import httpx
-from nonebot.plugin import PluginMetadata
+from nonebot.plugin import PluginMetadata, inherit_supported_adapters
 from nonebot.params import CommandArg
 from nonebot import require
 require("nonebot_plugin_saa")
@@ -18,7 +18,7 @@ __plugin_meta__ = PluginMetadata(
     homepage="https://github.com/Ekac00/nonebot-plugin-RanFurryPic/",
     # 发布必填。
 
-    supported_adapters={"~onebot.v11"},
+    supported_adapters=inherit_supported_adapters("nonebot_plugin_session")
 )
 
 furry = on_command("来只毛", aliases={"毛毛", "furry"}, priority=9, block=True)
