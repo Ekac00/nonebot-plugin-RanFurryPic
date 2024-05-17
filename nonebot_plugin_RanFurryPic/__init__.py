@@ -58,11 +58,12 @@ async def handle_get_pic():
     suggest = pic_json["picture"]["suggest"]
     #return MessageSegment.image(pic_id_url) + f"好的嗷呜～\n毛毛名称：{name}\n留言：{suggest}\n图片UID:{pic_id}"
 
-    #使用saa构建消息
+    #返回参数
     return pic_id_url, name, suggest, pic_id
 
 @furry.handle()
 async def handle_furry():
     pic_id_url, name, suggest, pic_id = await handle_get_pic()
     text = f'好的嗷呜～\n毛毛名称：{name}\n留言：{suggest}\n图片UID:{pic_id}'
-    await MessageFactory([Text(text), Image(pic_id_url)]).send()
+    #使用saa构建消息
+    await MessageFactory([Image(pic_id_url), Text(text)]).send()
