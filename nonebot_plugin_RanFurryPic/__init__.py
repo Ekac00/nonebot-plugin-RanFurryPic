@@ -61,7 +61,7 @@ async def handle_get_pic():
     name = pic_json["picture"]["name"]
     suggest = pic_json["picture"]["suggest"]
 
-    #使用saa构建消息
+    #返回参数
     return pic_id_url, name, suggest, pic_id
 
 @furry.handle()
