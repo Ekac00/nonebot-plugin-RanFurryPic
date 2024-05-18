@@ -1,10 +1,12 @@
-from nonebot.plugin import on_command
+from nonebot import on_command
 from nonebot import logger
-from nonebot.adapters.onebot.v11 import MessageSegment
 import httpx
-from nonebot.plugin import PluginMetadata
-from nonebot.adapters import Message
+from nonebot.plugin import PluginMetadata, inherit_supported_adapters
 from nonebot.params import CommandArg
+from nonebot import require
+require("nonebot_plugin_saa")
+from nonebot_plugin_saa import Text, Image, MessageFactory
+
 
 __plugin_meta__ = PluginMetadata(
     name="随机毛图",
@@ -12,14 +14,11 @@ __plugin_meta__ = PluginMetadata(
     usage="预设指令有furry、来只毛、毛毛三种指令，发送后将会调用兽云的随即图片API并返回图片及基本介绍",
 
     type="application",
-    # 发布必填，当前有效类型有：`library`（为其他插件编写提供功能），`application`（向机器人用户提供功能）。
 
     homepage="https://github.com/Ekac00/nonebot-plugin-RanFurryPic/",
     # 发布必填。
 
-    supported_adapters={"~onebot.v11"},
-    # 支持的适配器集合，其中 `~` 在此处代表前缀 `nonebot.adapters.`，其余适配器亦按此格式填写。
-    # 若插件可以保证兼容所有适配器（即仅使用基本适配器功能）可不填写，否则应该列出插件支持的适配器。
+    supported_adapters=inherit_supported_adapters("nonebot_plugin_session")
 )
 
 furry = on_command("来只毛", aliases={"毛毛", "furry"}, priority=9, block=True)
@@ -57,9 +56,14 @@ async def handle_get_pic():
     # 发送图片
     name = pic_json["picture"]["name"]
     suggest = pic_json["picture"]["suggest"]
-    return MessageSegment.image(pic_id_url) + f"好的嗷呜～\n毛毛名称：{name}\n留言：{suggest}\n图片UID:{pic_id}"
+    #return MessageSegment.image(pic_id_url) + f"好的嗷呜～\n毛毛名称：{name}\n留言：{suggest}\n图片UID:{pic_id}"
+
+    #返回参数
+    return pic_id_url, name, suggest, pic_id
 
 @furry.handle()
 async def handle_furry():
-    result = await handle_get_pic()
-    await furry.finish(result)
+    pic_id_url, name, suggest, pic_id = await handle_get_pic()
+    text = f'好的嗷呜～\n毛毛名称：{name}\n留言：{suggest}\n图片UID:{pic_id}'
+    #使用saa构建消息
+    await MessageFactory([Image(pic_id_url), Text(text)]).send()
